@@ -2,8 +2,13 @@
 function rollDice() {
   return 1 + Math.floor(Math.random() * 6);
 } 
+function endTurn()  {
+  $(".roll-number").text(0);
+  $(".turn-number").text(0);
+  return totalScore.push(turnScoreSum);
+}
 
-function User(userName, turnScore, totalScore){
+function User(userName, turnScore, totalScore) {
   this.userName = userName,
   this.turnScore = turnScore,
   this.totalScore = totalScore
@@ -17,19 +22,20 @@ let totalScore = 0;
 function addDiceRollValues(diceRollValue, diceRollValue){
   return diceRollValue + diceRollValue
 }
-let turnScoreArray = [];
-let diceRollValue = rollDice();
-$(".roll-number").text(diceRollValue);
-let turnScoreSum = turnScoreArray.push(diceRollValue);
-turnScoreArray.forEach(function(element) {
-turnScoreSum += element - 1;
-});
+// let turnScoreArray = [];
+// let diceRollValue = rollDice();
+// $(".roll-number").text(diceRollValue);
+// let turnScoreSum = turnScoreArray.push(diceRollValue);
+// turnScoreArray.forEach(function(element) {
+// turnScoreSum += element - 1;
+// });
 
 // User Interface
 $(document).ready(function() {
 
   $("#halt-btn").click(function(){
-    let totalScore = turnScoreSum;
+    let totalScore = endTurn();
+    $(".total-number").text(totalScore);
     console.log(totalScore);
   });
 
