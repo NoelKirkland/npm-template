@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pig Dice Game 🐷</h1>
+      <form id="name">
+        <div class="form-group">
+          <label for="user-name">Enter name:</label>
+          <input type="text" id="user-name" required>
+          <button type="submit" id="name-btn" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+        <div class="buttons">
+          <button type="submit" id="roll-btn" class="btn btn-primary">Roll</button>
+          <button type="submit" id="halt-btn" class="btn btn-danger">Halt</button>
+        </div>
+      <div id="output">
+        <p>Name:  <span class="name"></span></p>
+        <p>Dice roll: <span class="roll-number"></span></p>
+        <p>Turn score: <span class="turn-number"></span></p>
+        <p>Total score: <span class="total-number"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
