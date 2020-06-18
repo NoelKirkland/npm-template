@@ -1,3 +1,5 @@
+
+// this is the object constructor that with retain all of our little elements
 function PigDiceGame(turn, turnTotal, totalScore, users, winner){
   this.turn = turn,
   this.turnTotal = turnTotal,
@@ -11,6 +13,7 @@ users.forEach(function(user) {
 PigDiceGame.users[0] = user1
 PigDiceGame.users[1] = 
 
+// this is our object constructor that will keep our user name and that users total score
 function UserName(UserName, totalscore){
   this.UserName = UserName,
   this.totalscore = totalscore
